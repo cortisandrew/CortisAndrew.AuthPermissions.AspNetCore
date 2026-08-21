@@ -8,7 +8,7 @@ using AuthPermissions.BulkLoadServices.Concrete;
 using Test.TestHelpers;
 using TestSupport.EfHelpers;
 using Xunit;
-using Xunit.Abstractions;
+
 using Xunit.Extensions.AssertExtensions;
 
 namespace Test.UnitTests.TestAuthPermissions

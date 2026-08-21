@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Test.StubClasses;
 using Test.TestHelpers;
 using Xunit;
-using Xunit.Abstractions;
+
 using Xunit.Extensions.AssertExtensions;
 
 namespace Test.UnitTests.TestAuthPermissionsAdmin

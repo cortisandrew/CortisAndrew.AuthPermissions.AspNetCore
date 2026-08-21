@@ -1,0 +1,136 @@
+{
+    "FormatVersion":  1,
+    "GeneratedAt":  "2026-08-20T23:59:14.8563415+02:00",
+    "Root":  ".",
+    "Packages":  [
+                     {
+                         "Package":  "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+                         "CentralVersion":  "10.0.0",
+                         "OtherVersions":  [
+                                               {
+                                                   "Version":  "6.0.11",
+                                                   "Projects":  [
+                                                                    {
+                                                                        "Name":  "Example1 - Backup.RazorPages.IndividualAccounts",
+                                                                        "Path":  "Example1.RazorPages.IndividualAccounts/Example1 - Backup.RazorPages.IndividualAccounts.csproj"
+                                                                    }
+                                                                ]
+                                               }
+                                           ]
+                     },
+                     {
+                         "Package":  "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+                         "CentralVersion":  "10.0.0",
+                         "OtherVersions":  [
+                                               {
+                                                   "Version":  "6.0.11",
+                                                   "Projects":  [
+                                                                    {
+                                                                        "Name":  "Example1 - Backup.RazorPages.IndividualAccounts",
+                                                                        "Path":  "Example1.RazorPages.IndividualAccounts/Example1 - Backup.RazorPages.IndividualAccounts.csproj"
+                                                                    }
+                                                                ]
+                                               }
+                                           ]
+                     },
+                     {
+                         "Package":  "Microsoft.AspNetCore.Identity.UI",
+                         "CentralVersion":  "10.0.0",
+                         "OtherVersions":  [
+                                               {
+                                                   "Version":  "6.0.11",
+                                                   "Projects":  [
+                                                                    {
+                                                                        "Name":  "Example1 - Backup.RazorPages.IndividualAccounts",
+                                                                        "Path":  "Example1.RazorPages.IndividualAccounts/Example1 - Backup.RazorPages.IndividualAccounts.csproj"
+                                                                    }
+                                                                ]
+                                               }
+                                           ]
+                     },
+                     {
+                         "Package":  "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation",
+                         "CentralVersion":  "10.0.0",
+                         "OtherVersions":  [
+                                               {
+                                                   "Version":  "6.0.11",
+                                                   "Projects":  [
+                                                                    {
+                                                                        "Name":  "Example1 - Backup.RazorPages.IndividualAccounts",
+                                                                        "Path":  "Example1.RazorPages.IndividualAccounts/Example1 - Backup.RazorPages.IndividualAccounts.csproj"
+                                                                    }
+                                                                ]
+                                               }
+                                           ]
+                     },
+                     {
+                         "Package":  "Microsoft.EntityFrameworkCore.SqlServer",
+                         "CentralVersion":  "10.0.0",
+                         "OtherVersions":  [
+                                               {
+                                                   "Version":  "6.0.11",
+                                                   "Projects":  [
+                                                                    {
+                                                                        "Name":  "Example1 - Backup.RazorPages.IndividualAccounts",
+                                                                        "Path":  "Example1.RazorPages.IndividualAccounts/Example1 - Backup.RazorPages.IndividualAccounts.csproj"
+                                                                    }
+                                                                ]
+                                               }
+                                           ]
+                     },
+                     {
+                         "Package":  "Microsoft.EntityFrameworkCore.Tools",
+                         "CentralVersion":  "10.0.0",
+                         "OtherVersions":  [
+                                               {
+                                                   "Version":  "6.0.11",
+                                                   "Projects":  [
+                                                                    {
+                                                                        "Name":  "Example1 - Backup.RazorPages.IndividualAccounts",
+                                                                        "Path":  "Example1.RazorPages.IndividualAccounts/Example1 - Backup.RazorPages.IndividualAccounts.csproj"
+                                                                    }
+                                                                ]
+                                               },
+                                               {
+                                                   "Version":  "9.0.0",
+                                                   "Projects":  [
+                                                                    {
+                                                                        "Name":  "AuthPermissions",
+                                                                        "Path":  "AuthPermissions/AuthPermissions.csproj"
+                                                                    }
+                                                                ]
+                                               }
+                                           ]
+                     },
+                     {
+                         "Package":  "Microsoft.NET.Test.Sdk",
+                         "CentralVersion":  "17.12.0",
+                         "OtherVersions":  [
+                                               {
+                                                   "Version":  "17.0.0",
+                                                   "Projects":  [
+                                                                    {
+                                                                        "Name":  "Test",
+                                                                        "Path":  "Test/Test.csproj"
+                                                                    }
+                                                                ]
+                                               }
+                                           ]
+                     },
+                     {
+                         "Package":  "Microsoft.VisualStudio.Web.CodeGeneration.Design",
+                         "CentralVersion":  "10.0.0",
+                         "OtherVersions":  [
+                                               {
+                                                   "Version":  "6.0.10",
+                                                   "Projects":  [
+                                                                    {
+                                                                        "Name":  "Example1 - Backup.RazorPages.IndividualAccounts",
+                                                                        "Path":  "Example1.RazorPages.IndividualAccounts/Example1 - Backup.RazorPages.IndividualAccounts.csproj"
+                                                                    }
+                                                                ]
+                                               }
+                                           ]
+                     }
+                 ]
+}

@@ -4,7 +4,7 @@
 using AuthPermissions.BaseCode.PermissionsCode;
 using Example1.RazorPages.IndividualAccounts.PermissionsCode;
 using Xunit;
-using Xunit.Abstractions;
+
 using Xunit.Extensions.AssertExtensions;
 
 namespace Test.UnitTests.TestAuthPermissionsAdmin

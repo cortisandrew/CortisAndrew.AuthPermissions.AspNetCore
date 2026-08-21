@@ -1,7 +1,6 @@
 ﻿// Copyright (c) 2023 Jon P Smith, GitHub: JonPSmith, web: http://www.thereformedprogrammer.net/
 // Licensed under MIT license. See License.txt in the project root for license information.
 
-using System.Text.Json;
 using AuthPermissions.AdminCode;
 using AuthPermissions.AspNetCore.OpenIdCode;
 using AuthPermissions.BaseCode.SetupCode;
@@ -9,7 +8,9 @@ using Azure.Identity;
 using LocalizeMessagesAndErrors;
 using Microsoft.Extensions.Options;
 using Microsoft.Graph;
+using Microsoft.Graph.Models;
 using StatusGeneric;
+using System.Text.Json;
 
 namespace AuthPermissions.SupportCode.AzureAdServices;
 
@@ -52,12 +53,24 @@ public class AzureAdAccessService : IAzureAdAccessService
         var result = new List<SyncAuthenticationUser>();
         var graphClient = new GraphServiceClient(_clientSecretCredential, _scopes);
 
+        /*
         var users = await graphClient.Users
             .Request()
             .Select(x => new { x.Id, x.Mail, x.UserPrincipalName, x.DisplayName, x.AccountEnabled })
             .GetAsync();
+        */
+
+        var users = await graphClient.Users
+            .GetAsync(config =>
+            {
+                config.QueryParameters.Select = ["id", "mail", "userPrincipalName", "displayName", "accountEnabled" ];
+            });
+
+        if (users == null)
+            return result;
 
         // Iterate over all the users in the directory
+        /*
         var pageIterator = PageIterator<User>
             .CreatePageIterator(
                 graphClient,
@@ -71,6 +84,25 @@ public class AzureAdAccessService : IAzureAdAccessService
                     return true;
                 }
             );
+        */
+
+        var pageIterator = PageIterator<User, UserCollectionResponse>
+        .CreatePageIterator(
+            graphClient,
+            users,
+            user =>
+            {
+                if (user.AccountEnabled == true)
+                {
+                    result.Add(
+                        new SyncAuthenticationUser(
+                            user.Id,
+                            user.Mail ?? user.UserPrincipalName,
+                            user.DisplayName));
+                }
+
+                return true;
+            });
 
         await pageIterator.IterateAsync();
 
@@ -87,11 +119,17 @@ public class AzureAdAccessService : IAzureAdAccessService
         try
         {
             var graphClient = new GraphServiceClient(_clientSecretCredential, _scopes);
+            /*
             var user = await graphClient.Users[email]
                 .Request()
                 .Select("id")
                 .GetAsync();
-
+            */
+            var user = await graphClient.Users[email]
+                .GetAsync(config =>
+                {
+                    config.QueryParameters.Select = ["id"];
+                });
             return user.Id;
         }
         catch (ServiceException e)
@@ -137,12 +175,19 @@ public class AzureAdAccessService : IAzureAdAccessService
         try
         {
             var graphClient = new GraphServiceClient(_clientSecretCredential, _scopes);
-            var result = await graphClient.Users
+
+            /*
+               var result = await graphClient.Users
                 .Request()
                 .AddAsync(user);
+            */
 
-            return status.SetResult(result.Id);
+            var result = await graphClient.Users
+                .PostAsync(user);
+
+            return status.SetResult(result?.Id);
         }
+
         catch (ServiceException e)
         {
             var errorJson = JsonSerializer.Deserialize<Rootobject>(e.RawResponseBody);

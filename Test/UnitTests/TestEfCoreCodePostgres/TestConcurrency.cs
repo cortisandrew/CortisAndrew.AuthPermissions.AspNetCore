@@ -7,7 +7,7 @@ using EntityFramework.Exceptions.SqlServer;
 using Test.TestHelpers;
 using TestSupport.Attributes;
 using TestSupport.EfHelpers;
-using Xunit.Abstractions;
+using Xunit;
 using Xunit.Extensions.AssertExtensions;
 
 namespace Test.UnitTests.TestEfCoreCodePostgres

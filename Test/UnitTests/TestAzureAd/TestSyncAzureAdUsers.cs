@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Test.TestHelpers;
 using TestSupport.Attributes;
 using TestSupport.Helpers;
-using Xunit.Abstractions;
+using Xunit;
 using Xunit.Extensions.AssertExtensions;
 
 namespace Test.UnitTests.TestAzureAd

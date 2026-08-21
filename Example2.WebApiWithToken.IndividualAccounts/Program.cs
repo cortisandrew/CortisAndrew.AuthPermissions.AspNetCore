@@ -20,10 +20,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
+//using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Net.DistributedFileStoreCache;
 using RunMethodsSequentially;
 using Microsoft.Extensions.Hosting;
+using System.Collections.Generic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -119,6 +121,7 @@ builder.Services.AddDistributedFileStoreCache(options =>
 builder.Services.AddScoped<IDatabaseStateChangeEvent, RoleChangedDetectorService>();
 builder.Services.AddScoped<IDatabaseStateChangeEvent, EmailChangeDetectorService>();
 
+//OpenAPI.NET breaking change: below is updated
 //thanks to: https://www.c-sharpcorner.com/article/authentication-and-authorization-in-asp-net-5-with-jwt-and-swagger/
 builder.Services.AddSwaggerGen(c =>
 {
@@ -131,21 +134,34 @@ builder.Services.AddSwaggerGen(c =>
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.Http,
         Scheme = "bearer",
+        BearerFormat = "JWT"
+
+        /*
         Reference = new OpenApiReference
         {
             Type = ReferenceType.SecurityScheme,
             Id = "Bearer"
         }
+        */
     };
 
     c.AddSecurityDefinition("Bearer", securitySchema);
 
     var securityRequirement = new OpenApiSecurityRequirement
                 {
-                    { securitySchema, new[] { "Bearer" } }
+                    {
+                        new OpenApiSecuritySchemeReference("Bearer"),
+                        new List<string>()
+                    }
                 };
+        
+    /*
+        securitySchema, new[] { "Bearer" },
+                    new List<string>
+                };
+    */
 
-    c.AddSecurityRequirement(securityRequirement);
+    c.AddSecurityRequirement(document => securityRequirement);
 });
 
 var app = builder.Build();
