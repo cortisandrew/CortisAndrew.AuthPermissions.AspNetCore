@@ -2,18 +2,21 @@
 <allsettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- this contains the typical information you should have in your settings -->
   <!-- See documentation for all the possible values -->
+  <!-- Make sure that version has the correct format with x.x.x.x, otherwise you can get an exception after packing -->
   <metadata>
-    <id>AuthPermissions.AspNetCore</id>
-    <version>10.0.0</version>
+    <id>CortisAndrew.AuthPermissions.AspNetCore</id>
+    <version>10.0.0-CortisAndrew.2</version>
     <authors>Jon P Smith</authors>
-    <product>AuthPermissions.AspNetCore</product>
+    <product>CortisAndrew.AuthPermissions.AspNetCore</product>
     <copyright>Copyright (c) 2021 Jon P Smith</copyright>
     <description>Provides extra authorization and multi-tenant features to an ASP.NET Core application.</description>
     <releaseNotes>
+		- Now the MultiProjPack is able to use central package repositories (i.e. Directory.Packages.props)
+		- Normalises the package name of packages projects
 		- Updated to .NET 10 version, using the new 
 	</releaseNotes>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/JonPSmith/AuthPermissions.AspNetCore</projectUrl>
+    <projectUrl>https://github.com/cortisandrew/CortisAndrew.AuthPermissions.AspNetCore</projectUrl>
     <icon>images\AuthPermissionsAspNetCoreNuGetIcon.png</icon>
     <tags>ASP.NET Core, Entity Framework Core</tags>
   </metadata>

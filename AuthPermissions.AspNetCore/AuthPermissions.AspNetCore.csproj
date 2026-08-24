@@ -10,7 +10,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Authorization" />
     <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" />
     <PackageReference Include="Net.DistributedFileStoreCache" />
-    <PackageReference Include="Net.LocalizeMessagesAndErrors" />
+    <PackageReference Include="CortisAndrew.Net.LocalizeMessagesAndErrors" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
   </ItemGroup>

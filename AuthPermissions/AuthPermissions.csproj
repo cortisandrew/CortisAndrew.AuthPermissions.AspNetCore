@@ -20,7 +20,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Hosting" />
     <PackageReference Include="CortisAndrew.Net.RunMethodsSequentially" />
-    <PackageReference Include="Net.LocalizeMessagesAndErrors" />
+    <PackageReference Include="CortisAndrew.Net.LocalizeMessagesAndErrors" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminCode\Services\Internal\" />

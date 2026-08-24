@@ -46,6 +46,6 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
     <PackageReference Include="CortisAndrew.Net.RunMethodsSequentially" />
     <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" />
-    <PackageReference Include="Net.LocalizeMessagesAndErrors" />
+    <PackageReference Include="CortisAndrew.Net.LocalizeMessagesAndErrors" />
   </ItemGroup>
 </Project>

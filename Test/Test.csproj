@@ -14,7 +14,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" VersionOverride="18.9.0" />
     <PackageReference Include="Moq" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
-    <PackageReference Include="Net.LocalizeMessagesAndErrors" />
+    <PackageReference Include="CortisAndrew.Net.LocalizeMessagesAndErrors" />
     <PackageReference Include="ResXResourceReader.NetStandard" />
     <PackageReference Include="CsvHelper" />
     <PackageReference Include="GenericServices.StatusGeneric" />
