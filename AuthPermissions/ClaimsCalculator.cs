@@ -41,8 +41,9 @@ namespace AuthPermissions
         /// <summary>
         /// This will return the required AuthP claims, plus any extra claims from registered <see cref="IClaimsAdder"/> methods  
         /// </summary>
-        /// <param name="userId"></param>
-        /// That's because the JWT Token uses a claim of type "nameid" to hold the ASP.NET Core user's ID</param>
+        /// <param name="userId">
+        /// That's because the JWT Token uses a claim of type "nameid" to hold the ASP.NET Core user's ID
+        /// </param>
         /// <returns></returns>
         public async Task<List<Claim>> GetClaimsForAuthUserAsync(string userId)
         {
