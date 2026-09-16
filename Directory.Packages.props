@@ -11,7 +11,7 @@
     <PackageVersion Include="CortisAndrew.EfCore.GenericServices" Version="10.0-CortisAndrew.1" />
     <PackageVersion Include="CortisAndrew.EfCore.GenericServices.AspNetCore" Version="4.1.1-CortisAndrew.1" />
     <PackageVersion Include="CortisAndrew.EfCore.TestSupport" Version="10.0-CortisAndrew.1" />
-    <PackageVersion Include="CortisAndrew.Net.LocalizeMessagesAndErrors" Version="10.0.0-CortisAndrew.1" />
+    <PackageVersion Include="CortisAndrew.Net.LocalizeMessagesAndErrors" Version="10.0.0-CortisAndrew.2" />
     <PackageVersion Include="CortisAndrew.Net.RunMethodsSequentially" Version="2.0.1-CortisAndrew.1" />
     <PackageVersion Include="EntityFrameworkCore.Exceptions.PostgreSQL" Version="10.0.1" />
     <PackageVersion Include="EntityFrameworkCore.Exceptions.Sqlite" Version="10.0.1" />
