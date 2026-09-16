@@ -5,12 +5,14 @@
   <!-- Make sure that version has the correct format with x.x.x.x, otherwise you can get an exception after packing -->
   <metadata>
     <id>CortisAndrew.AuthPermissions.AspNetCore</id>
-    <version>10.0.0-CortisAndrew.1</version>
+    <version>10.0.0-CortisAndrew.2</version>
     <authors>Jon P Smith</authors>
     <product>CortisAndrew.AuthPermissions.AspNetCore</product>
     <copyright>Copyright (c) 2021 Jon P Smith</copyright>
     <description>Provides extra authorization and multi-tenant features to an ASP.NET Core application.</description>
     <releaseNotes>
+		Releaste 10.0.0-CortisAndrew.2: updated vulnerable dependencies
+		
 		- Updated to .NET 10 version, using the new 
 	</releaseNotes>
     <license type="expression">MIT</license>
